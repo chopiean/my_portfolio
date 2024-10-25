@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fly to SanFransisco</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      header {
+        background-image: url("https://images.squarespace-cdn.com/content/v1/5c7f5f60797f746a7d769cab/ed578728-b35e-4336-ba27-8eced4e968f9/golden+gate+bridge+sarowly.jpg");
+        opacity: 0.8;
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        padding: 0px 5px;
+        font-size: 3em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .content {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #ff1616;
+        font-weight: 800;
+        font-size: xx-large;
+        margin-left: 38%;
+      }
+      p {
+        line-height: 1.6;
+        font-size: 25px;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: #f94848;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        justify-content: center;
+        align-content: center;
+        width: fit-content;
+      }
+      .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .image-gallery > div {
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+      }
+      .image-gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>I love San Francisco!!</h1>
+    </header>
+    <div class="content">
+      <h2>San Francisco</h2>
+      <p>
+        San Francisco, located on the northern California coast, is renowned for
+        its diverse culture, iconic landmarks, and rich history. Established as
+        a key port during the California Gold Rush in 1849, it rapidly
+        transformed into a major financial center. The city is famous for its
+        steep hills, Victorian architecture, and attractions like the Golden
+        Gate Bridge and Alcatraz Island.
+      </p>
+      <p>
+        With a population exceeding 800,000, it is the fourth-most populous city
+        in California. San Francisco is also recognized for its vibrant arts
+        scene and progressive social movements, making it a hub for innovation
+        and cultural diversity in the United States.
+      </p>
+
+      <div class="image-gallery">
+        <div>
+          <img
+            src="https://cdn.britannica.com/13/77413-050-95217C0B/Golden-Gate-Bridge-San-Francisco.jpg"
+          />
+        </div>
+        <div><img src="./IMG_0122.JPG" alt="Hong An" /></div>
+        <div><img src="./IMG_0187.jpg" alt="Hong An" /></div>
+        <div>
+          <img
+            src="https://pohcdn.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/San%20Francisco_1.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.britannica.com/12/64412-050-41065C81/San-Francisco-California.jpg"
+          />
+        </div>
+        <div>
+          <img
+            src="https://www.esri.com/about/newsroom/wp-content/uploads/2021/10/SFO_Vertical_826.jpg"
+          />
+        </div>
+      </div>
+
+      <a href="./index.html" class="cta-button">Back to the Home Page</a>
+    </div>
+  </body>
+</html>
