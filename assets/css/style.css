@@ -214,8 +214,8 @@ html {
 
 #content .member-name {
   font-size: 18px;
-  text-decoration: none;
-  color: black;
+  text-decoration: underline;
+  color: rgb(31, 82, 163);
 }
 #content .member-img {
   margin-top: 15px;
@@ -225,7 +225,7 @@ html {
 }
 #content .tour-section {
   background-color: #000;
-  height: 80vh;
+  height: 110vh;
 }
 .tickets-list {
   background-color: #fff;
