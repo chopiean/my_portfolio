@@ -10,7 +10,7 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="./assets/img/1200px-Treble_a.svg.png"
+      href="https://cdn-icons-png.flaticon.com/512/2720/2720550.png"
     />
   </head>
   <body>
@@ -153,11 +153,11 @@
           </div>
         </div>
 
-        <div id="contact" class="content-section">
+        <form id="contact" class="content-section">
           <h2 class="section-heading">CONTACT</h2>
           <p class="section-subheading">If you want to know me</p>
-
-          <div class="row contact-content">
+          <form action="https://formspree.io/f/{form_id}" method="post"></form>
+            <div class="row contact-content">
             <div class="col col-half s-col-full contact-info">
               <p><i class="ti-location-pin"></i>Helsinki, Finland</p>
               <p>
@@ -175,7 +175,7 @@
                   <div class="col col-half s-col-full">
                     <input
                       type="text"
-                      name=""
+                      name="Fill your name"
                       placeholder="Name"
                       required
                       id=""
@@ -212,7 +212,8 @@
                 />
               </form>
             </div>
-          </div>
+            </div>
+          </form>>
         </div>
         <img
           class="big_picture"
@@ -223,85 +224,52 @@
 
       <div id="footer">
         <div class="socials-list">
-          <a href=""><i class="ti-facebook"></i></a>
-          <a href=""><i class="ti-instagram"></i></a>
+          <a href="https://www.facebook.com/chopiean/"
+            ><i class="ti-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/_chopiean/"
+            ><i class="ti-instagram"></i
+          ></a>
           <a href=""><i class="ti-youtube"></i></a>
           <a href=""><i class="ti-twitter"></i></a>
-          <a href=""><i class="ti-pinterest"></i></a>
-          <a href=""><i class="ti-linkedin"></i></a>
+          <a href="https://www.pinterest.com/honganle1010/"
+            ><i class="ti-pinterest"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/xuan-hong-an-le-34491a308/"
+            ><i class="ti-linkedin"></i
+          ></a>
         </div>
         <p class="copyright">Made by <a href="#"> An Le</a></p>
       </div>
     </div>
-    <div class="modal js-modal">
-      <div class="modal-container js-modal-container">
-        <div class="modal-close js-modal-close">
-          <i class="ti-close"></i>
-        </div>
+  </body>
+  <script>
+    var header = document.getElementById("header");
+    var mobileMenu = document.getElementById("mobile-menu");
+    var headerHeight = header.clientHeight;
 
-        <header class="modal-header">
-          <i class="ti-bag"></i>
-          Tickets
-        </header>
-        <div class="modal-body">
-          <label for="quantity" class="modal-label">
-            <i class="ti-shopping-cart"></i>
-            Tickets, $15 per person
-          </label>
-          <input
-            id="quantity"
-            type="text"
-            class="modal-input"
-            placeholder="How many"
-          />
+    mobileMenu.onclick = function () {
+      var isClosed = header.clientHeight === 46;
+      if (isClosed) {
+        header.style.height = "auto";
+      } else {
+        header.style.height = null;
+      }
+    };
 
-          <label for="email" class="modal-label">
-            <i class="ti-user"></i>
-            Send to
-          </label>
-          <input
-            id="email"
-            type="email"
-            class="modal-input"
-            placeholder="Enter email"
-          />
-
-          <button id="buy-tickets">Pay <i class="ti-check"></i></button>
-        </div>
-        <footer class="modal-footer">
-          <p class="modal-help">Need <a href="">help?</a></p>
-        </footer>
-      </div>
-    </div>
-    <script>
-      var header = document.getElementById("header");
-      var mobileMenu = document.getElementById("mobile-menu");
-      var headerHeight = header.clientHeight;
-
-      mobileMenu.onclick = function () {
-        var isClosed = header.clientHeight === 46;
-        if (isClosed) {
-          header.style.height = "auto";
-        } else {
+    var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+    for (var i = 0; i < menuItems.length; i++) {
+      var menuItem = menuItems[i];
+      menuItem.onclick = function (event) {
+        var isParentMenu =
+          this.nextElementSibling &&
+          this.nextElementSibling.classList.contains("subnav");
+        if (!isParentMenu) {
           header.style.height = null;
+        } else {
+          event.preventDefault();
         }
       };
-
-      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-      for (var i = 0; i < menuItems.length; i++) {
-        var menuItem = menuItems[i];
-
-        menuItem.onclick = function (event) {
-          var isParentMenu =
-            this.nextElementSibling &&
-            this.nextElementSibling.classList.contains("subnav");
-          if (!isParentMenu) {
-            header.style.height = null;
-          } else {
-            event.preventDefault();
-          }
-        };
-      }
-    </script>
-  </body>
+    }
+  </script>
 </html>

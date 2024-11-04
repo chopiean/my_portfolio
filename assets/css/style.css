@@ -284,6 +284,8 @@ html {
 .place-dsc {
   margin-top: 15px;
   line-height: 1.4;
+  width: 200px;
+  height: 150px;
 }
 .place-buy-btn {
   background-color: black;
