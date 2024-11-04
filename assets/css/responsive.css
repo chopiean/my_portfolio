@@ -55,7 +55,7 @@
   }
   #content .tour-section {
     background-color: #000;
-    height: 250vh;
+    height: 225vh;
   }
 
   .contact-form {
@@ -64,5 +64,14 @@
   }
   .form-submit-btn {
     font-size: 16px;
+  }
+  .place-dsc {
+    margin-top: 15px;
+    line-height: 1.4;
+    width: 350px;
+    height: 100px;
+  }
+  .place-body {
+    height: 220px;
   }
 }
